@@ -1,12 +1,10 @@
-import { useMediaQuery } from '@chakra-ui/react';
+import { useMediaQuery, useMultiStyleConfig, StylesProvider } from '@chakra-ui/react';
 import {
   chakra,
   forwardRef,
   HTMLChakraProps,
   omitThemingProps,
-  StylesProvider,
   ThemingProps,
-  useMultiStyleConfig,
 } from '@chakra-ui/system';
 import { cx } from '@chakra-ui/utils';
 import * as React from 'react';

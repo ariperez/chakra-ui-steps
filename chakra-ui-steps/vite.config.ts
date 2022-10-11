@@ -20,7 +20,6 @@ export default defineConfig({
           '@chakra-ui/theme-tools': '@chakra-ui/theme-tools',
           '@chakra-ui/utils': '@chakra-ui/utils',
           '@chakra-ui/icon': '@chakra-ui/icon',
-          'react/jsx-runtime': 'react/jsx-runtime',
           '@chakra-ui/react': '@chakra-ui/react',
           '@chakra-ui/transition': '@chakra-ui/transition',
         },

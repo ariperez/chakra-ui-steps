@@ -3,8 +3,12 @@ import {
   forwardRef,
   HTMLChakraProps,
   ThemingProps,
-  useStyles,
 } from '@chakra-ui/system';
+import {
+  StylesProvider,
+  useMultiStyleConfig,
+  useStyles,
+} from '@chakra-ui/react'
 import { Collapse } from '@chakra-ui/transition';
 import { dataAttr } from '@chakra-ui/utils';
 import { AnimatePresence } from 'framer-motion';
@@ -32,7 +36,7 @@ interface StepInternalConfig extends ThemingProps {
   isLastStep?: boolean;
 }
 
-interface FullStepProps extends StepProps, StepInternalConfig {}
+interface FullStepProps extends StepProps, StepInternalConfig { }
 
 export const Step = forwardRef<StepProps, 'li'>(
   (props, ref: React.Ref<any>) => {
@@ -125,7 +129,7 @@ export const Step = forwardRef<StepProps, 'li'>(
               }
               data-invalid={dataAttr(
                 ((hasVisited && isKeepError) || isCurrentStep) &&
-                  (isError || state === 'error')
+                (isError || state === 'error')
               )}
               data-highlighted={dataAttr(isCompletedStep)}
               data-clickable={dataAttr(clickable)}

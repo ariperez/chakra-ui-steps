@@ -2,8 +2,8 @@ import {
   chakra,
   HTMLChakraProps,
   ThemingProps,
-  useStyles,
 } from '@chakra-ui/system';
+import { useStyles } from '@chakra-ui/react';
 import { dataAttr } from '@chakra-ui/utils';
 import * as React from 'react';
 import { useStepsContext } from '../../context';
@@ -51,9 +51,8 @@ export const Connector = React.memo(
           top: `calc(${stepIconContainer.height} / 2  - ${base.height} / 2)`,
           left: `calc(((${widths?.[index]}px + ${stepIconContainer.width}) / 2) + 8px)`,
           // use index of next step to determine spacing
-          right: `calc((${widths?.[index + 1]}px - ${
-            stepIconContainer.width
-          }) / -2 + 8px)`,
+          right: `calc((${widths?.[index + 1]}px - ${stepIconContainer.width
+            }) / -2 + 8px)`,
         };
       }
       return base;

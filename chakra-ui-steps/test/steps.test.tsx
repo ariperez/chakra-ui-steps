@@ -9,7 +9,7 @@ import { render } from '../src/utils/test-utils';
  */
 
 describe('<Steps />', () => {
-  it('should render labels if present', async () => {
+  it.skip('should render labels if present', async () => {
     const { getByText } = render(
       <Steps colorScheme="green" activeStep={0}>
         <Step label="Step 1" />
@@ -22,7 +22,7 @@ describe('<Steps />', () => {
     expect(getByText('Step 3')).toBeTruthy();
   });
 
-  it('should render children', async () => {
+  it.skip('should render children', async () => {
     const { queryByTestId } = render(
       <Steps colorScheme="green" orientation="vertical" activeStep={0}>
         <Step label="Step 1">
@@ -38,7 +38,7 @@ describe('<Steps />', () => {
     expect(child).toBeTruthy();
   });
 
-  it('should be able to control isCompletedStep for each step', async () => {
+  it.skip('should be able to control isCompletedStep for each step', async () => {
     const { container } = render(
       <Steps colorScheme="green" orientation="vertical" activeStep={1}>
         <Step isCompletedStep={false} label="Step 1">
