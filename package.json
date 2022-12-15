@@ -11,5 +11,6 @@
   "workspaces": [
     "chakra-ui-steps",
     "website"
-  ]
+  ],
+  "packageManager": "yarn@3.3.0"
 }
